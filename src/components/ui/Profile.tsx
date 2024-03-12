@@ -27,7 +27,7 @@ const Profile: React.FC<ProfileProps> = ({ image, username, about, currentCompan
       <div className='grid grid-cols-6 col-start-2 col-end-7'>
         <div className='center col-start-1 col-end-5'>
           <div className='about_desc'>
-            <p className='text-[14px]'>About: {about}</p>
+            <p className='text-[14px] md:text-xl font-semibold'>About: {about}</p>
           </div>
         </div>
         <div className='right_side md:grid col-start-6 md:justify-items-end '>
