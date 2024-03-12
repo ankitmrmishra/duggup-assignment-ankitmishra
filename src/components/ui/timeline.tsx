@@ -16,7 +16,7 @@ interface dateprops{
 
 export default function Timeline() {
   return (
-    <div className=' px-16 '>
+    <div className=' px-16 py-20 md:py-0 flex flex-col justify-center align-middle md:block'>
       <JobUpdate />
       <Stories date='December 2023' />
 
@@ -32,20 +32,20 @@ export default function Timeline() {
 
 const Stories: React.FC<dateprops> = ({date}) => {
     return (
-      <div className='right px-6 py-2 ml-5 flex-grow flex gap-9 max-mobile:flex-wrap max-mobile:justify-center '>
-        <div className='py-4 flex items-center border-r-4 border-dotted relative mobile:h-72 max-mobile:h-36 mobile:w-40 ml-4 max-mobile:w-2 '>
-          <div className='left ml-auto py-7 '>
-            <p className='text-xs w-40 text-slate-400 flex justify-end px-[20px] '>
+      <div className='right md:px-6 md:py-2 md:ml-5 flex-grow flex flex-col md:flex-row md:gap-9 max-mobile:flex-wrap max-mobile:justify-center mr-28 md:mr-0  '>
+        <div className='py-4  flex items-center border-r-4 border-dotted relative mobile:h-72 max-mobile:h-36 mobile:w-40 ml-4 max-mobile:w-2 '>
+          <div className='left ml-auto md:py-7  '>
+            <p className='text-xs w-40 text-slate-400 md:flex justify-end py-3 md:px-[20px] mr-4 md:mr-0 '>
               {date}
             </p>
           </div>
 
           <div className='absolute -right-2.5'>
-            <div className='circle w-[17px] h-[17px] flex align-middle justify-center items-center   rounded-full border-blue-700 border-[3px] left-[279px] '></div>
+            <div className='circle w-[17px] h-[17px] flex align-middle justify-center items-center   rounded-full bg-white border-blue-700 border-[3px] left-[279px] '></div>
           </div>
         </div>
 
-        <div className=' px-6 py-2 ml-5 flex-wrap flex gap-9 max-mobile:flex-wrap max-mobile:justify-center '>
+        <div className=' md:px-6   py-2 md:ml-5 flex-wrap flex gap-9 justify-center md:justify-start ml-32  '>
           <Cards
             srcimage={Steve.src}
             alt='this is steve jobs'
@@ -83,9 +83,9 @@ const Stories: React.FC<dateprops> = ({date}) => {
 
 export function JobUpdate() {
     return (
-      <div className=' flex items-center max-mobile:flex-col max-mobile:items-center'>
-        <div className='jobsmalldetails   flex flex-col  items-center px-5 border-r-4 border-dotted relative h-40  '>
-          <div className='text-right py-4 mr-5 w-40 items-end flex flex-col'>
+      <div className=' flex w-full items-center flex-col md:flex-row'>
+        <div className='jobsmalldetails   flex flex-col  items-center md:px-5 border-r-4 border-dotted relative h-40 mr-40 md:mr-0 pr-5 justify-center '>
+          <div className='text-right md:py-4 md:mr-5 w-40 items-end flex flex-col  justify-center align-middle'>
             <div className='companyLogo'>
               <Image src={CL} width={40} height={40} alt='cl'></Image>
             </div>
@@ -108,7 +108,7 @@ export function JobUpdate() {
               </span>
             </div>
           </div>
-          <div className='arrow absolute top-0 -right-2.5 text-slate-400'>
+          <div className='arrow absolute top-0 md:-right-[12px] -right-[12px] text-xl text-slate-400 md:text-xl'>
             <RiArrowUpSLine />
           </div>
           <div className='absolute -right-2.5 top-20'>
@@ -116,10 +116,10 @@ export function JobUpdate() {
           </div>
         </div>
 
-        <div className='right mobile:px-6 py-2 mobile:ml-5 flex-grow'>
-          <div className='bg-[#FFFFFF] shadow-slate-800 flex flex-col justify-center w-[776px] ml-20 items-center align-middle h-[99px] rounded-lg'>
-            <div className='title'>VP Engineeerig</div>
-            <div className='jobtype'>Full Time Remote</div>
+        <div className='mr-16 md:mr-0 flex-grow'>
+          <div className='bg-white drop-shadow-md flex flex-col justify-center md:w-[725px] w-[344px] ml-20 items-start align-middle h-[99px] rounded-lg'>
+            <div className='title text-xl px-5 font-bold'>VP Engineeerig</div>
+            <div className='jobtype text-sm px-5 font-thin text-slate-400 py-1'>Full Time Remote</div>
           </div>
         </div>
       </div>
@@ -128,7 +128,7 @@ export function JobUpdate() {
 
 const Cards :  React.FC<cardprops> = ({srcimage , alt , content}) =>{
     return (
-      <div className='cards bg-white w-[344px] h-[226] gap-2 rounded-lg '>
+      <div className='cards bg-white w-[344px] h-[226] gap-2 rounded-lg drop-shadow-lg '>
        
         <div className=' rounded-xl gap-2  '>
           <Image
@@ -140,7 +140,7 @@ const Cards :  React.FC<cardprops> = ({srcimage , alt , content}) =>{
           />
         </div>
         <div className='title flex items-center justify-center align-middle '>
-          <span className='text-sm w-[296px] '>
+          <span className='text-sm w-[296px] flex align-middle text-center p-2 '>
           {content}
           </span>
         </div>
