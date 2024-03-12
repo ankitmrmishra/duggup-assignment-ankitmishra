@@ -16,7 +16,7 @@ interface dateprops{
 
 export default function Timeline() {
   return (
-    <div className=' px-16 py-20 md:py-0 flex flex-col justify-center align-middle md:block'>
+    <div className=' md:px-16 py-20 md:py-0 flex flex-col items-center justify-center align-middle md:block'>
       <JobUpdate />
       <Stories date='December 2023' />
 
@@ -32,10 +32,10 @@ export default function Timeline() {
 
 const Stories: React.FC<dateprops> = ({date}) => {
     return (
-      <div className='right md:px-6 md:py-2 md:ml-5 flex-grow flex flex-col md:flex-row md:gap-9 max-mobile:flex-wrap max-mobile:justify-center mr-28 md:mr-0  '>
-        <div className='py-4  flex items-center border-r-4 border-dotted relative mobile:h-72 max-mobile:h-36 mobile:w-40 ml-4 max-mobile:w-2 '>
+      <div className='right md:px-6 md:py-2 md:ml-5 flex-grow flex flex-col md:flex-row md:gap-9 max-mobile:flex-wrap max-mobile:justify-center mr-28 md:mr-0   '>
+        <div className='py-4  flex items-center justify-start  border-r-4 border-dotted relative ml-4 w-[18rem]'>
           <div className='left ml-auto md:py-7  '>
-            <p className='text-xs w-40 text-slate-400 md:flex justify-end py-3 md:px-[20px] mr-4 md:mr-0 '>
+            <p className='text-xs md:w-40 text-slate-400 md:flex justify-start py-3 md:px-[20px] mr-4 md:mr-0'>
               {date}
             </p>
           </div>

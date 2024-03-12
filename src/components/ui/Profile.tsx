@@ -13,11 +13,12 @@ interface ProfileProps {
 }
 
 const Profile: React.FC<ProfileProps> = ({ image, username, about, currentCompany, companyLogo, designation, links }) => {
+    
   return (
     <div className=' md:grid grid-cols-6   p-8 md:ml-[13rem] md:mr-[13rem] '>
       <div className='left_side  col-end-2'>
-        <div className='profile_picture'>
-          <Image src={image} width={120} height={120} alt='Profile Image' />
+        <div className='profile_picture rounded-full'>
+          <Image src={image} width={120} height={120} alt='Profile Image' className='rounded-full border-4 border-gray-500'/>
         </div>
         <div className='user_name text-slate-500 w-[120px] h-[56px] flex justify-center align-middle items-center capitalize'>
           <p>{username}</p>
@@ -40,12 +41,12 @@ const Profile: React.FC<ProfileProps> = ({ image, username, about, currentCompan
           </button>
         </div>
 
-        <div className='link_section col-start-6 w-full md:gap-10 gap-2 px-6 py-10 flex md:justify-end justify-center justify-items-start align-middle items-center'>
+        <div className=' link_section col-start-6 w-full md:gap-2 gap-2 px-6 py-10 flex md:justify-center justify-center justify-items-start align-middle items-center'>
           <div className='linkkkk md:mt-5  gap-1 flex justify-center items-center align-middle '>
             <a
               className=' flex justify-center  items-center align-middle '
               href={links}>
-              {links}{" "}
+             Website
             </a>
             <div className=''>
               <FaExternalLinkAlt />

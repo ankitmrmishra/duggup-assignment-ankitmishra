@@ -7,6 +7,16 @@ import { PiChartBarHorizontalFill } from "react-icons/pi";
 import { CgAddR } from "react-icons/cg";
 import { RiArrowDropDownLine } from "react-icons/ri";
 import Sam from "./assets/sam.jpeg";
+import myprof from "./assets/68045075.png";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+
 
 function Header() {
   return (
@@ -20,7 +30,7 @@ function Header() {
             height={60}
             alt='Duggup log'
           />
-          <span className='font-extrabold md:text-2xl text-sm'>duggup</span>
+          <span className='font-extrabold md:text-2xl text-xl'>duggup</span>
         </div>
         <div className='nav_components flex justify-between align-middle items-center gap-10 text-lg '>
           <div className='nav_comp flex align-middle justify-center drop-shadow-md items-center gap-8 md:relative  bottom-0 bg-gray-300 md:bg-transparent w-full left-0 h-16 fixed z-20'>
@@ -39,11 +49,27 @@ function Header() {
           </button>
           <div className='profile flex align-middle md:justify-between justify-center items-center md:gap-3 '>
             <div className='profile_pic md:flex align-middle items-center justify-center   rounded-full '>
-              <img src={Sam.src} alt='profile pic' className='md:w-[8rem] md:h-[3rem] w-[4rem] h-[3rem] rounded-full object-cover' />
+              <img
+                src={myprof.src}
+                alt='profile pic'
+                className=' rounded-full object-cover w-20 h-10 '
+              />
             </div>
-            <div className='username text-sm hidden  md:block'>Ankit Mishra</div>
+            <div className='username text-sm hidden  md:block'>
+              Ankit Mishra
+            </div>
             <div className='dropdown_icon text-lg '>
-              <RiArrowDropDownLine />
+              <DropdownMenu>
+                <DropdownMenuTrigger>
+                  <RiArrowDropDownLine />
+                </DropdownMenuTrigger>
+                <DropdownMenuContent>
+                  <DropdownMenuLabel>Settings</DropdownMenuLabel>
+                  <DropdownMenuSeparator />
+                  <DropdownMenuItem>Log Out</DropdownMenuItem>
+                  <DropdownMenuSeparator />
+                </DropdownMenuContent>
+              </DropdownMenu>
             </div>
           </div>
         </div>
