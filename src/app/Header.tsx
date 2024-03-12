@@ -52,7 +52,7 @@ function Header() {
               <img
                 src={myprof.src}
                 alt='profile pic'
-                className=' rounded-full object-cover w-20 h-10 '
+                className=' rounded-full object-cover md:w-28 md:h-10 w-20 h-10 '
               />
             </div>
             <div className='username text-sm hidden  md:block'>
