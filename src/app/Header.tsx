@@ -33,7 +33,7 @@ function Header() {
           <span className='font-extrabold md:text-2xl text-xl'>duggup</span>
         </div>
         <div className='nav_components flex justify-between align-middle items-center gap-10 text-lg '>
-          <div className='nav_comp flex align-middle justify-center drop-shadow-md items-center gap-8 md:relative  bottom-0 bg-gray-300 md:bg-transparent w-full left-0 h-16 fixed z-20'>
+          <div className='nav_comp flex align-middle justify-center drop-shadow-md items-center gap-8 md:relative  bottom-0 bg-gray-50 md:bg-transparent w-full left-0 h-16 fixed z-20'>
             <span className='home flex align-middle items-center justify-between text-center gap-2'>
               <RiHomeLine /> <span>Home</span>
             </span>
@@ -49,11 +49,15 @@ function Header() {
           </button>
           <div className='profile flex align-middle md:justify-between justify-center items-center md:gap-3 '>
             <div className='profile_pic md:flex align-middle items-center justify-center   rounded-full '>
-              <img
-                src={myprof.src}
-                alt='profile pic'
-                className=' rounded-full object-cover md:w-28 md:h-10 w-20 h-10 '
-              />
+              <div className='profile_picture rounded-full'>
+                <Image
+                  src={myprof.src}
+                  width={120}
+                  height={120}
+                  alt='Profile Image'
+                  className='rounded-full'
+                />
+              </div>
             </div>
             <div className='username text-sm hidden  md:block'>
               Ankit Mishra
